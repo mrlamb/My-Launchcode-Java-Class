@@ -1,10 +1,10 @@
 package pset2;
 
-import pset2.MethodChoice;
+import pset2.PrintMethods;
 
-public class Brick_Mortor {
+public class PyramidFactory {
 	
-	private MethodChoice dp_method;
+	private PrintMethods printMethod;
 	private int height;
 	
 	private static StringBuilder drawPyramid(int height)
@@ -34,17 +34,17 @@ public class Brick_Mortor {
 	}
 	
 
-	public void setDp_method(MethodChoice dp_method) {
-		this.dp_method = dp_method;
+	public void setPrintMethod(PrintMethods printMethod) {
+		this.printMethod = printMethod;
 	}
 	
-	public MethodChoice getDP_method() {
-		return dp_method;
+	public PrintMethods getPrintMethod() {
+		return printMethod;
 	}
 	
 	public void deliver_output() {
 		
-		dp_method.Draw_Pyramid(drawPyramid(this.height));
+		printMethod.printOutput(drawPyramid(this.height));
 	}
 	
 	

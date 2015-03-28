@@ -3,12 +3,12 @@ package pset2.outputs;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-import pset2.MethodChoice;
+import pset2.PrintMethods;
 
-public class PyramidToFile implements MethodChoice {
+public class OutputToFile implements PrintMethods {
 
 	@Override
-	public void Draw_Pyramid(StringBuilder sb) {
+	public void printOutput(StringBuilder sb) {
 		PrintWriter out;
 		try {
 			out = new PrintWriter("pyramid.txt");

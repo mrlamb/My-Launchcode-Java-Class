@@ -2,7 +2,7 @@
 
 	import java.util.Scanner;
 	import java.lang.Exception;
-	import pset2.Brick_Mortor;
+	import pset2.PyramidFactory;
 	import pset2.outputs.*;
 
 	public class Mario {
@@ -10,7 +10,7 @@
 		public static void main(String[] args) {
 			// Main method for Mario class, responsible for
 			// getting the height of the pyramid then passing control
-			// to BuildPyramid(height);
+			// to buildPyramid(height);
 			int height = -1;
 			int outputSelection = -1;
 			// Initialize new scanner object to get an int
@@ -39,7 +39,7 @@
 			
 			
 			
-			Brick_Mortor pyramid = new Brick_Mortor();
+			PyramidFactory pyramid = new PyramidFactory();
 			pyramid.setHeight(height);
 						
 			while (outputSelection == -1) {
@@ -53,10 +53,10 @@
 					switch (outputSelection)
 					{
 					case 1:
-						pyramid.setDp_method(new PyramidToOutput());
+						pyramid.setPrintMethod(new OutputToConsole());
 						break;
 					case 2:
-						pyramid.setDp_method(new PyramidToFile());
+						pyramid.setPrintMethod(new OutputToFile());
 						break;
 		
 					default:
