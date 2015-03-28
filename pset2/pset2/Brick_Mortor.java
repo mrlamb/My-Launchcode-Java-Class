@@ -1,8 +1,13 @@
 package pset2;
 
-public class DrawPyramid {
+import pset2.MethodChoice;
+
+public class Brick_Mortor {
 	
-	private StringBuilder DrawPyramid(int height)
+	private MethodChoice dp_method;
+	private int height;
+	
+	private static StringBuilder drawPyramid(int height)
 	{
 		//The pyramid will be Height hashes tall
 		int hashes = 2;
@@ -24,14 +29,24 @@ public class DrawPyramid {
 	     }
 		return sb;
 	}
-	
-	public static void pyramidToFile(int height) {
-		
+	public void setHeight(int height) {
+		this.height = height;
 	}
 	
-	public static void pyramidToOutput(int height) {
-		
-		System.out.print(DrawPyramid(height));
+
+	public void setDp_method(MethodChoice dp_method) {
+		this.dp_method = dp_method;
 	}
+	
+	public MethodChoice getDP_method() {
+		return dp_method;
+	}
+	
+	public void deliver_output() {
+		
+		dp_method.Draw_Pyramid(drawPyramid(this.height));
+	}
+	
+	
 
 }
