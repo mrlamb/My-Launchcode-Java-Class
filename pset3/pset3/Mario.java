@@ -1,11 +1,11 @@
-	package pset2;
+	package pset3;
 
 	import java.util.Scanner;
 import java.lang.Exception;
 
-import pset2.PyramidFactory;
-import pset2.outputs.*;
-import pset2.outputs.OutputToConsole;
+import pset3.PyramidFactory;
+import pset3.outputs.*;
+import pset3.outputs.OutputToConsole;
 
 	public class Mario {
 		
