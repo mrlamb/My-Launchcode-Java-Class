@@ -1,26 +1,36 @@
 package pset4;
 
-import java.util.Scanner;
-import java.lang.Exception;
 
-import pset4.PyramidFactory;
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 	public class Mario {
 		
 		
+		private PrinterFactory pf;
+		private static ApplicationContext context;
 
+		public Mario(PrinterFactory instance) {
+			
+			this.pf = instance;
+		}
+		
+		
 		public static void main(String[] args) {
 			
-			Mario mario = new Mario(PrinterFactory.getInstance());
+			context = new ClassPathXmlApplicationContext("application.xml");
+			Mario mario = (Mario) context.getBean("mario");
 			mario.start();
+			
 						
 		}
 		
-		private PrinterFactory pf;
-
-		public Mario(PrinterFactory instance) {
-			this.pf = instance;
-		}
+		
+		
+		
 		
 		public void start() {
 			// Main method for Mario class, responsible for
@@ -77,6 +87,7 @@ import pset4.PyramidFactory;
 			pyramid.deliver_output();
 			// close the scanner
 			getInt.close();
+			
 		}
 
 	}

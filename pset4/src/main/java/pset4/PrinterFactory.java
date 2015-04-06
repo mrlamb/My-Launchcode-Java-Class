@@ -1,6 +1,8 @@
 package pset4;
 
-import pset4.outputs.*;
+import pset4.outputs.OutputToConsole;
+import pset4.outputs.OutputToFile;
+
 
 public class PrinterFactory {
 	
