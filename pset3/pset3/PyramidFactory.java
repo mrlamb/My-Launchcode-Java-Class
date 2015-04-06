@@ -1,7 +1,5 @@
 package pset3;
 
-import pset3.PrintMethods;
-
 public class PyramidFactory {
 	
 	private PrintMethods printMethod;

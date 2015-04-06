@@ -1,11 +1,9 @@
-	package pset3;
+package pset3;
 
-	import java.util.Scanner;
+import java.util.Scanner;
 import java.lang.Exception;
 
 import pset3.PyramidFactory;
-import pset3.outputs.*;
-import pset3.outputs.OutputToConsole;
 
 	public class Mario {
 		
@@ -52,19 +50,8 @@ import pset3.outputs.OutputToConsole;
 				try {
 					outputSelection = getInt.nextInt();
 								
-					switch (outputSelection)
-					{
-					case 1:
-						pyramid.setPrintMethod(new OutputToConsole());
-						break;
-					case 2:
-						pyramid.setPrintMethod(new OutputToFile());
-						break;
-		
-					default:
-						outputSelection = -1;
-						System.out.println("Try again...");
-					}
+					pyramid.setPrintMethod(PrinterFactory.printMethod(outputSelection));
+					
 				}
 				catch (Exception e)
 				{
