@@ -7,7 +7,22 @@ import pset4.PyramidFactory;
 
 	public class Mario {
 		
+		
+
 		public static void main(String[] args) {
+			
+			Mario mario = new Mario(PrinterFactory.getInstance());
+			mario.start();
+						
+		}
+		
+		private PrinterFactory pf;
+
+		public Mario(PrinterFactory instance) {
+			this.pf = instance;
+		}
+		
+		public void start() {
 			// Main method for Mario class, responsible for
 			// getting the height of the pyramid then passing control
 			// to buildPyramid(height);
@@ -50,7 +65,7 @@ import pset4.PyramidFactory;
 				try {
 					outputSelection = getInt.nextInt();
 								
-					pyramid.setPrintMethod(PrinterFactory.getInstance().printMethod(outputSelection));
+					pyramid.setPrintMethod(pf.printMethod(outputSelection));
 					
 				}
 				catch (Exception e)
@@ -62,8 +77,6 @@ import pset4.PyramidFactory;
 			pyramid.deliver_output();
 			// close the scanner
 			getInt.close();
-			
-						
 		}
 
 	}
