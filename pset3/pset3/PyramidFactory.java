@@ -37,7 +37,9 @@ public class PyramidFactory {
 	}
 	
 	public PrintMethods getPrintMethod() {
+		
 		return printMethod;
+		
 	}
 	
 	public void deliver_output() {

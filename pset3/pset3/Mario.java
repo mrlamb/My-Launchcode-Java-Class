@@ -42,7 +42,7 @@ import pset3.PyramidFactory;
 			PyramidFactory pyramid = new PyramidFactory();
 			pyramid.setHeight(height);
 						
-			while (outputSelection == -1) {
+			while (pyramid.getPrintMethod() == null) {
 				System.out.println("Choose your preferred method (1 or 2):");
 				System.out.println("1 - Output to console");
 				System.out.println("2 - Output to a file");
@@ -55,7 +55,6 @@ import pset3.PyramidFactory;
 				}
 				catch (Exception e)
 				{
-					outputSelection = -1;
 					getInt.next();
 					System.out.println("Try again...");
 				}
