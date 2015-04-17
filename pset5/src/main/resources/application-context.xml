@@ -3,5 +3,9 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <
+<bean id = "greedy" class = "Greedy>
+	<constructor-arg name = "instance" ref = "instance1" />
+</bean>
+
+<bean id = "instance1" value = "$3.20" />
 </beans>

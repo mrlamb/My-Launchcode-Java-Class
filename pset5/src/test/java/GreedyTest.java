@@ -32,5 +32,12 @@ public class GreedyTest {
 		
 		assertEquals("21", greedy.getNumOfCoins());
 	}
+	
+	@Test
+	public void tenEighteenEUShouldGetNine() {
+		Greedy greedy = new Greedy("€10.18");
+		
+		assertEquals("9", greedy.getNumOfCoins());
+	}
 
 }

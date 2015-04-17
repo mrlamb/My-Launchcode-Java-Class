@@ -11,56 +11,56 @@ public class CoinCalculatorTest {
 
     @Test
     public void zeroChangeMeansYouGetZeroCoins() {
-        CoinCalculator coinCalculator = new CoinCalculator();
+        CoinCalculatorUS coinCalculatorUS = new CoinCalculatorUS();
 
-        String coinMessage = coinCalculator.calculateChange("$0.00");
+        String coinMessage = coinCalculatorUS.calculateChange("0.00");
 
-        assertEquals("$0.00", coinMessage);
+        assertEquals("0.00", coinMessage);
     }
 
     @Test
     public void oneCentShouldGiveYouOnePenny() {
-        CoinCalculator coinCalculator = new CoinCalculator();
+        CoinCalculatorUS coinCalculatorUS = new CoinCalculatorUS();
 
-        String coinMessage = coinCalculator.calculateChange("$0.01");
+        String coinMessage = coinCalculatorUS.calculateChange("0.01");
 
-        assertEquals("$0.00", coinMessage);
+        assertEquals("0.00", coinMessage);
     }
 
     @Test
     public void tenCentsShouldGiveYouOneDime() {
-        CoinCalculator coinCalculator = new CoinCalculator();
+        CoinCalculatorUS coinCalculatorUS = new CoinCalculatorUS();
 
-        String coinMessage = coinCalculator.calculateChange("$0.10");
+        String coinMessage = coinCalculatorUS.calculateChange("0.10");
 
-        assertEquals("$0.00", coinMessage);
+        assertEquals("0.00", coinMessage);
     }
     
     @Test
     public void oneHundredCentsShouldGiveYouOneDollar() {
-    	CoinCalculator coinCalculator = new CoinCalculator();
+    	CoinCalculatorUS coinCalculatorUS = new CoinCalculatorUS();
     	
-    	String coinMessage = coinCalculator.calculateChange("$1.00");
+    	String coinMessage = coinCalculatorUS.calculateChange("1.00");
     	
-    	assertEquals("$0.00", coinMessage);
+    	assertEquals("0.00", coinMessage);
     }
     
     @Test
     public void fiveCentsShouldGiveYouOneNickel() {
-    	CoinCalculator coinCalculator = new CoinCalculator();
+    	CoinCalculatorUS coinCalculatorUS = new CoinCalculatorUS();
     	
-    	String coinMessage = coinCalculator.calculateChange("$0.05");
+    	String coinMessage = coinCalculatorUS.calculateChange("0.05");
     	
-    	assertEquals("$0.00", coinMessage);
+    	assertEquals("0.00", coinMessage);
     }
     
     @Test
     public void twentyFiveCentsShouldGiveYouOneQuarter() {
-    	CoinCalculator coinCalculator = new CoinCalculator();
+    	CoinCalculatorUS coinCalculatorUS = new CoinCalculatorUS();
     	
-    	String coinMessage = coinCalculator.calculateChange("$0.25");
+    	String coinMessage = coinCalculatorUS.calculateChange("0.25");
     	
-    	assertEquals("$0.00", coinMessage);
+    	assertEquals("0.00", coinMessage);
     }
 
 }

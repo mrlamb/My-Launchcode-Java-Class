@@ -11,7 +11,7 @@ public class Greedy {
 	 */
 	public Greedy(String amount) {
 		int coins = 0;
-		CoinCalculator coinCalculator = new CoinCalculator();
+		CoinCalculator coinCalculator = CalculatorFactory.CoinCalculatorSelect(amount.substring(0,1));
         String change = amount.substring(1);
         while (Float.valueOf(change) != 0.00F) {
         	change = coinCalculator.calculateChange(change);
